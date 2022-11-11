@@ -10,6 +10,11 @@ class Analysis():
     def __analysis__(self,url:str,q:str,_type:str)->tuple[str,str,list]:
         _type:str = _type
         content:str = Wikipedia(q)
-        hashtags:list[str] =['ss']
+        hashtags:list[str] =['auto_insta']
 
+        hashtags.append(q.split(" "))
+        content_tag = content.split(" ")
+        for i in range(5):
+            hashtags.append(content_tag[i])
+    
         return _type,content,hashtags
