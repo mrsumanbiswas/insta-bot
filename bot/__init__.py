@@ -11,3 +11,22 @@ Instagram Bot Library
 This an instagram bot library, written in Python, for human beings.
 """
 
+# Set default logging handler to avoid "No handler found" warnings.
+import logging
+from logging import NullHandler
+
+
+# version
+from .__version__ import (
+    __title__,
+    __author__,
+    __author_email__,
+    __copyright__,
+    __description__,
+    __license__,
+    __url__,
+    __version__,
+)
+
+
+logging.getLogger(__name__).addHandler(NullHandler())

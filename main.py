@@ -1,3 +1,1 @@
-import requests
-
-requests
+from bot import *
