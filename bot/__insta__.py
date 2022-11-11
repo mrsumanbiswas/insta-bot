@@ -7,7 +7,7 @@ class Bot():
         password:str
     ) -> None:
         self.bot = insta()
-        self.bot.login(username=username,password=password)
+        # self.bot.login(username=username,password=password)
 
     def upload_image(
         self,

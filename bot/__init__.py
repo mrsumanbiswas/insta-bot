@@ -10,9 +10,7 @@ Instagram Bot Library
 
 This an instagram bot library, written in Python, for human beings.
 """
-from .__insta__ import Bot
-from .__media__ import Media
-from .__analysis__ import *
+from .__main__ import Run
 
 # version
 from .__version__ import (
@@ -25,8 +23,3 @@ from .__version__ import (
     __url__,
     __version__,
 )
-
-try:
-    pass
-except:
-    pass
