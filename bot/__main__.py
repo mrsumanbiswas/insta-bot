@@ -8,6 +8,7 @@ class Run(Bot,Media,Analysis):
         super().__init__(username,password)
         super(Bot,self).__init__(api_key)
         super(Media,self).__init__("test")
+        self.__run__()
 
     def __sleeper__(self,time:int):
         """
@@ -17,6 +18,7 @@ class Run(Bot,Media,Analysis):
         sleep(time*60*60)
         print("My sleep is done!")
 
-    while True:
+    def __run__(self):
+        while True:
 
-        __sleeper__(0.0001)
+            self.__sleeper__(0.001)

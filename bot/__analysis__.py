@@ -5,3 +5,6 @@ class Analysis():
 
     def __uploader__(self):
         pass
+
+    def analysis():
+        pass
