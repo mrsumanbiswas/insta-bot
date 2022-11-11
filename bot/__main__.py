@@ -8,6 +8,12 @@ class Run(Bot,Analysis):
         super(Bot,self).__init__(api_key)
         self.__run__()
 
+
+    def __uploader__(self):
+        pass
+
+
+
     def __sleeper__(self,time:int):
         """
         ### `time` is in hour(s)
