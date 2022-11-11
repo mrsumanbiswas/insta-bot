@@ -9,10 +9,14 @@ class Run(Bot,Media,Analysis):
         super(Bot,self).__init__(api_key)
         super(Media,self).__init__("test")
 
-        def __sleeper__(self,time:int):
-            """
-            ### `time` is in hour(s)
-            """
-            sleep(time*60*60)
+    def __sleeper__(self,time:int):
+        """
+        ### `time` is in hour(s)
+        """
+        print(f"I'm going to sleep for next {time} hour(s).")
+        sleep(time*60*60)
+        print("My sleep is done!")
 
     while True:
+
+        __sleeper__(5)
