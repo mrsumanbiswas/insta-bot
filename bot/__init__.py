@@ -24,3 +24,7 @@ from .__version__ import (
     __version__,
 )
 
+try:
+    pass
+except:
+    pass
