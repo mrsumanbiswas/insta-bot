@@ -28,5 +28,7 @@ from .__version__ import (
     __version__,
 )
 
+from .img import *
+
 
 logging.getLogger(__name__).addHandler(NullHandler())
