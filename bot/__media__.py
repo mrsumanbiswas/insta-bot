@@ -7,7 +7,7 @@ class Media():
         self.url:str = "https://pixabay.com/api/"
         self.api_key=api_key
 
-    def image(self,q:str,orientation:str="vertical",category:str="all",_type:str="all") -> list:
+    def image(self,q:str,orientation:str="vertical",category:str="all",_type:str="all")->tuple[list,str]:
         data:list=[]
 
         res = get(
@@ -27,9 +27,9 @@ class Media():
 
             data.append(x['webformatURL'])
 
-        return data
+        return data,q
 
-    def video(self,q:str,category:str="all",_type:str="all") -> list:
+    def video(self,q:str,category:str="all",_type:str="all")->tuple[list,str]:
         data:list=[]
 
         res = get(
@@ -48,4 +48,4 @@ class Media():
         for x in res.json()['hits']:
             data.append(x['videos']['small']['url'])
     
-        return data
+        return data,q
