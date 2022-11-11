@@ -1,6 +1,5 @@
 from instabot import Bot as insta
 
-
 class Bot():
     def __init__(
         self,
