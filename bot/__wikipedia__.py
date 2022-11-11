@@ -9,4 +9,4 @@ def Wikipedia(quary: str) -> str:
         Summary = texts3.replace(")", "").replace("(", "").replace("=", "")
         return Summary
     except:
-        return f"Sorry nothing match about : {quary}"
+        return quary
