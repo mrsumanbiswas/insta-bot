@@ -11,7 +11,7 @@ class Run(Bot,Media,Analysis):
         self.__run__()
 
 
-    def __uploader__(self):
+    def __uploader__(self,_type:str,content:str,hashtags:list[str]):
         pass
 
 
@@ -26,5 +26,6 @@ class Run(Bot,Media,Analysis):
 
     def __run__(self):
         while True:
-            super().__analysis__()
+            result = super().__analysis__()
+            self.__uploader__(result[0],result[1],result[2])
             self.__sleeper__(0.001)

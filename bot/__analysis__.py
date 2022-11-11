@@ -4,6 +4,9 @@ class Analysis():
         print("ok")
         pass
   
-    def __analysis__(self):
-        print('s')
-        pass
+    def __analysis__(self)->tuple[str,str,list]:
+        _type:str =""
+        content:str =""
+        hashtags:list[str] =['ss']
+
+        return _type,content,hashtags
