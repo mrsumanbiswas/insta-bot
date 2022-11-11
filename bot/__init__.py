@@ -1,8 +1,8 @@
-#      iiiiii   nn    nn    ssssss  tttttt    aaaaaaaaa                         
-#        ii     nnn   nn    ss        tt      aa     aa                          
-#        ii     nn n  nn    ssssss    tt      aaaaaaaaa                         
-#        ii     nn  n nn        ss    tt      aa     aa                         
-#      iiiiii   nn   nnn    ssssss    tt      aa     aa         
+#      iiiiii   nn    nn    ssssss  tttttt    aaaaaaaaa         bbbbb          oooo      tttttt                                                                           
+#        ii     nnn   nn    ss        tt      aa     aa         bb   bb      oo    oo      tt                                                                            
+#        ii     nn n  nn    ssssss    tt      aaaaaaaaa         bbbbb        oo    oo      tt                                                                           
+#        ii     nn  n nn        ss    tt      aa     aa         bb   bb      oo    oo      tt                                                                           
+#      iiiiii   nn   nnn    ssssss    tt      aa     aa         bbbbb          oooo        tt                                                           
 
 """
 Instagram Bot Library
