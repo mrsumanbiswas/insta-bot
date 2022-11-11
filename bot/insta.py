@@ -8,7 +8,7 @@ class Bot():
         password:str
     ) -> None:
         self.bot = insta()
-        # self.bot.login(username=username,password=password)
+        self.bot.login(username=username,password=password)
 
     def upload_image(
         self,
@@ -48,5 +48,8 @@ class Bot():
         """
         return self.bot.send_message(text,user_ids)
 
-    def follow(self):
-        self.bot.
+    def follow(self,user_ids:list):
+        """
+        follw a user
+        """
+        return self.bot.follow_users(user_ids)
