@@ -1,9 +1,7 @@
-from .__media__  import Media
 
-class Analysis(Media):
+class Analysis():
     def __init__(self,api_key:str) -> None:
-        super().__init__(api_key)
-
+        pass
   
     def __analysis__(self):
         print('s')
