@@ -3,8 +3,7 @@ import wikipedia
 
 def Wikipedia(quary: str) -> str:
     try:
-        quary: str = quary.replace("summary:", "")
-        Summary = wikipedia.summary(quary, sentences=10)
+        Summary = wikipedia.summary(quary, sentences=3)
         texts2 = re.sub("\[.*?\]", "", Summary)
         texts3 = re.sub("\(.*?\)", "", texts2)
         Summary = texts3.replace(")", "").replace("(", "").replace("=", "")
