@@ -1,4 +1,3 @@
-
 from requests import get
 
 class Media():
