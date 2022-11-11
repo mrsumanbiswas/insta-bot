@@ -1,7 +1,7 @@
 
 from requests import get
 
-class Download():
+class Media():
     def __init__(
         self,api_key:str
         ) -> None:
