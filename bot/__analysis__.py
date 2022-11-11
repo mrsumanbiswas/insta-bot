@@ -1,6 +1,7 @@
 
 class Analysis():
-    def __init__(self,api_key:str) -> None:
+    def __init__(self) -> None:
+        print("ok")
         pass
   
     def __analysis__(self):
