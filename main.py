@@ -1,6 +1,5 @@
-# from instabot import 
-from bot import Run
 from os import getenv
+from bot import Run
 
 if __name__ == "__main__":
     try:
