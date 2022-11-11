@@ -10,8 +10,7 @@ class Run(Bot,Media,Analysis):
         super(Media,self).__init__()
         self.__run__()
 
-
-    def __uploader__(self,_type:str,content:str,hashtags:list[str]):
+    def __uploader__(self,_type:str,url:str,content:str,hashtags:list[str]):
         pass
 
     def __sleeper__(self,time:int):
@@ -46,5 +45,5 @@ class Run(Bot,Media,Analysis):
 
             for post in content[0]:
                 result = super().__analysis__(post,content[1],data['type'])
-                self.__uploader__(result[0],result[1],result[2])
+                self.__uploader__(result[0],result[1],result[2],result[3])
             self.__sleeper__(0.001)

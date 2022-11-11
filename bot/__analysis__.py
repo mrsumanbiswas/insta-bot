@@ -8,7 +8,6 @@ class Analysis():
         return ['']
 
     def __analysis__(self,url:str,q:str,_type:str)->tuple[str,str,list]:
-        _type:str = _type
         content:str = Wikipedia(q)
         hashtags:list[str] =['auto_insta']
 
@@ -17,4 +16,4 @@ class Analysis():
         for i in range(5):
             hashtags.append(content_tag[i])
     
-        return _type,content,hashtags
+        return _type,url,content,hashtags
