@@ -19,4 +19,4 @@ class Run(Bot,Media,Analysis):
 
     while True:
 
-        __sleeper__(5)
+        __sleeper__(0.0001)
