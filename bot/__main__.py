@@ -14,8 +14,6 @@ class Run(Bot,Media,Analysis):
     def __uploader__(self,_type:str,content:str,hashtags:list[str]):
         pass
 
-
-
     def __sleeper__(self,time:int):
         """
         ### `time` is in hour(s)
@@ -26,6 +24,7 @@ class Run(Bot,Media,Analysis):
 
     def __run__(self):
         while True:
-            result = super().__analysis__()
-            self.__uploader__(result[0],result[1],result[2])
+            for post in super().__algo__():
+                result = super().__analysis__()
+                self.__uploader__(result[0],result[1],result[2])
             self.__sleeper__(0.001)

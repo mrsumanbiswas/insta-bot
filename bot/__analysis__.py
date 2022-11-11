@@ -3,6 +3,9 @@ class Analysis():
     def __init__(self) -> None:
         print("ok")
   
+    def __algo__(self):
+        pass
+
     def __analysis__(self)->tuple[str,str,list]:
         _type:str ="0"
         content:str ="5"
