@@ -42,5 +42,11 @@ class Bot():
         """
         return self.bot.upload_story_photo(photo)
 
-    def follow():
-        pass
+    def send_message(self,text:str,user_ids:list):
+        """
+        send message to user(s).
+        """
+        return self.bot.send_message(text,user_ids)
+
+    def follow(self):
+        self.bot.
