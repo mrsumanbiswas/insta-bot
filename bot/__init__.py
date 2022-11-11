@@ -12,7 +12,7 @@ This an instagram bot library, written in Python, for human beings.
 """
 from .__insta__ import Bot
 from .__media__ import Media
-from .__analysis import *
+from .__analysis__ import *
 
 # version
 from .__version__ import (
