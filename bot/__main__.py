@@ -24,7 +24,27 @@ class Run(Bot,Media,Analysis):
 
     def __run__(self):
         while True:
-            for post in super().__algo__():
-                result = super().__analysis__()
+            data = super().__algo__()
+            if data['type'] == "image":
+                content=super().image(
+                    q=data['query'],
+                    orientation='any',
+                    category=data['category']
+                )
+            elif data["type"] == "video":
+                content=super().video(
+                    q=data['query'],
+                    category=['category'],
+                )
+            elif data["type"] == "story":
+                content=super().image(
+                    q=data['query'],
+                    category=data['category']
+                )
+            else:
+                content = ([],"")
+
+            for post in content[0]:
+                result = super().__analysis__(post,content[1],data['type'])
                 self.__uploader__(result[0],result[1],result[2])
             self.__sleeper__(0.001)
