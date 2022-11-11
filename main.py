@@ -6,4 +6,4 @@ if __name__ == "__main__":
     #     username="sdfs",
     #     password="dfsd"
     # )
-    Media()
+    pass
