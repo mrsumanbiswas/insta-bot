@@ -19,7 +19,7 @@ class Run(Bot,Media,Analysis):
             name=str(time())+".jpg"
 
         for i in hashtags:
-            content += f"#{i}"
+            content += f"\n#{i}"
 
         open("temp/"+name,"wb").write(get(url).content)
         if _type == "image":
