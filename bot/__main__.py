@@ -48,12 +48,12 @@ class Run(Bot,Media,Analysis):
             data = super().__algo__(category_index,query_index)
 
             if category_index == len(self.category):
-                category_index =0
+                category_index = 0
             else:
                 category_index += 1
         
             if query_index == len(self.query):
-                query_index =0
+                query_index = 0
             else:
                 query_index += 1
             
