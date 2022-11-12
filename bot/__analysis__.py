@@ -13,7 +13,6 @@ class Analysis():
         hour= datetime.now().hour
         _type = "image"
 
-
         if hour >= 0 and hour < 4:
             _type = "story"
         elif hour >= 4 and hour <8:
