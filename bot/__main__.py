@@ -37,6 +37,7 @@ class Run(Bot,Media,Analysis):
         """
         print(f"I'm going to sleep for next {time} hour(s).")
         system("rm -r temp/*")
+        self.query.reverse()
         sleep(time*60*60)
         print("My sleep is done!")
 
