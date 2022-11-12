@@ -61,7 +61,8 @@ class Run(Bot,Media,Analysis):
             elif data["type"] == "story":
                 content=super().image(
                     q=data['query'],
-                    category=data['category']
+                    category=data['category'],
+                    _type="animation"
                 )
             else:
                 content = ([],"")
