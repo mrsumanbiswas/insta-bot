@@ -81,6 +81,6 @@ class Run(Bot,Media,Analysis):
                 result = super().__analysis__(post,content[1],data['type'])
                 self.__uploader__(result[0],result[1],result[2],result[3])
             
-            self.__sleeper__(0.001)
+            self.__sleeper__(3)
 
 
