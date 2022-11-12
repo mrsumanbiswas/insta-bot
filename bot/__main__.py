@@ -46,7 +46,17 @@ class Run(Bot,Media,Analysis):
         category_index = 0
         while True:
             data = super().__algo__(category_index,query_index)
-            print(data["query"])
+
+            if category_index == len(self.category):
+                category_index =0
+            else:
+                category_index += 1
+        
+            if query_index == len(self.query):
+                query_index =0
+            else:
+                query_index += 1
+            
             if data['type'] == "image":
                 content=super().image(
                     q=data['query'],
@@ -73,13 +83,4 @@ class Run(Bot,Media,Analysis):
             
             self.__sleeper__(0.001)
 
-            if category_index == len(self.category):
-                category_index =0
-            else:
-                category_index += 1
-        
-            if query_index == len(self.query):
-                query_index =0
-            else:
-                query_index += 1
 
