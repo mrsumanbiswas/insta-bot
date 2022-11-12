@@ -22,12 +22,12 @@ class Run(Bot,Media,Analysis):
             content += f"#{i}"
 
         open("temp/"+name,"wb").write(get(url).content)
-        # if _type == "image":
-        #     super().upload_image("temp/"+name,caption=content)
-        # elif _type == "video":
-        #     super().upload_video("temp/"+name,caption=content)
-        # else:
-        #     super().upload_story("temp/"+name)
+        if _type == "image":
+            super().upload_image("temp/"+name,caption=content)
+        elif _type == "video":
+            super().upload_video("temp/"+name,caption=content)
+        else:
+            super().upload_story("temp/"+name)
 
         system(f"rm -r temp/{name}")
 

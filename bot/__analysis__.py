@@ -23,7 +23,7 @@ class Analysis():
         elif hour >= 12 and hour <16:
             _type = "story"
         elif hour >= 16 and hour <20:
-            _type = "video"
+            _type = "image"
         else:
             pass
         

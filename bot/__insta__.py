@@ -1,4 +1,3 @@
-from os import getenv
 from instabot import Bot as insta
 
 class Bot():
@@ -8,7 +7,7 @@ class Bot():
         passwd:str
     ) -> None:
         self.bot = insta()
-        # self.bot.login(username=userid,password=passwd)
+        self.bot.login(username=userid,password=passwd)
     def upload_image(
         self,
         photo:str,
