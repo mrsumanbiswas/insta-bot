@@ -36,8 +36,6 @@ class Analysis():
     def __analysis__(self,url:str,q:str,_type:str)->tuple[str,str,list]:
         content:str = Wikipedia(q)
         hashtags:list[str] =['dizzytechnician']
-
-        hashtags.append(q.split(" "))
         content_tag = content.split(" ")
         try:
             for i in range(5):
