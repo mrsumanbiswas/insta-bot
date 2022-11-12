@@ -9,10 +9,8 @@ class Analysis():
         ]
         self.query = ['cpp', 'golang', 'google', 'youtube', 'instagram', 'facebook', 'meta', 'india', 'germany', 'canada', 'australia', 'japan', 'china', 'united states', 'italy', 'brazil', 'afrika', 'mountains', 'river', 'sky', 'space', 'wall', 'door', 'book', 'physics', 'computers', 'servers', 'data base', 'python', 'coding', 'bot', 'robort', 'milkyway', 'nature', 'beautiful places', 'blue', 'red', 'yello', 'green', 'black', 'gray', 'canyon', 'imac', 'macbook', 'iphone', 'samsung', 'catfish', 'salmon', 'shark', 'german shepherd', 'bulldog', 'golden retriever', 'french bulldog', 'afghan hound', 'parrots', 'sparrow', 'duck', 'pigeon', 'goat', 'camel', 'cow', 'tiger', 'wolf', 'lion', 'crab', 'cobra', 'monkey', 'rat', 'deer', 'yak', 'lamb', 'zebra', 'whale', 'eagle', 'dove', 'claw', 'wing', 'potato', 'lemon', 'tomato', 'green jack', 'pumpkin', 'paddy', 'rice', 'wheat', 'flour', 'olive', 'banana', 'guava', 'cocoanut', 'palm', 'grape', 'mango', 'berry', 'almond', 'walnut', 'jasmine', 'lily', 'jam', 'cake', 'coffee', 'tea', 'biscuit', 'arch', 'window', 'snack', 'icecream', 'soda water', 'sugar candy', 'mirror', 'roller', 'school', 'college', 'university', 'black board', 'bell', 'blobe', 'duster', 'chalk', 'principal', 'arts', 'science', 'commerce', 'fine arts', 'engineering', 'medical science', 'management', 'agriculture', 'law', 'technology', 'horticulture', 'leaf', 'log']
   
-    def __algo__(self)->dict:
+    def __algo__(self,category_index:int=0,query_index:int=0)->dict:
         hour= datetime.now().hour
-        category_index = 0
-        query_index=0
         _type = "image"
 
 
@@ -25,19 +23,9 @@ class Analysis():
         elif hour >= 12 and hour <16:
             _type = "story"
         elif hour >= 16 and hour <20:
-            _type = "image"
+            _type = "video"
         else:
             pass
-        
-        if category_index == len(self.category):
-            category_index =0
-        else:
-            category_index += 1
-        
-        if query_index == len(self.query):
-            query_index =0
-        else:
-            query_index += 1
         
         return {
             "type":_type,
