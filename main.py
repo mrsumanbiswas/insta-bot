@@ -6,10 +6,7 @@ if __name__ == "__main__":
         username=getenv("username"),
         password=getenv("password"),
         api_key=getenv("api_key")
+        Run(username[0],password[0],api_key[0])
 
-    except:
-        username="test_user_name",
-        password="test_password",
-        api_key="test_api_key"
-
-    Run(username,password,api_key)
+    except Exception as e:
+        print("error: "+e)
