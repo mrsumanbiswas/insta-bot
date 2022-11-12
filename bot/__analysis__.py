@@ -7,7 +7,7 @@ class Analysis():
         self.category =[
             "backgrounds", "nature", "science", "education", "feelings", "health", "people", "religion", "places", "animals", "industry", "computer", "food", "sports", "transportation", "travel", "buildings", "business", "music"
         ]
-        self.query = []
+        self.query = ['cpp', 'golang', 'google', 'youtube', 'instagram', 'facebook', 'meta', 'india', 'germany', 'canada', 'australia', 'japan', 'china', 'united states', 'italy', 'brazil', 'afrika', 'mountains', 'river', 'sky', 'space', 'wall', 'door', 'book', 'physics', 'computers', 'servers', 'data base', 'python', 'coding', 'bot', 'robort', 'milkyway', 'nature', 'beautiful places', 'blue', 'red', 'yello', 'green', 'black', 'gray', 'canyon', 'imac', 'macbook', 'iphone', 'samsung', 'catfish', 'salmon', 'shark', 'german shepherd', 'bulldog', 'golden retriever', 'french bulldog', 'afghan hound', 'parrots', 'sparrow', 'duck', 'pigeon', 'goat', 'camel', 'cow', 'tiger', 'wolf', 'lion', 'crab', 'cobra', 'monkey', 'rat', 'deer', 'yak', 'lamb', 'zebra', 'whale', 'eagle', 'dove', 'claw', 'wing', 'potato', 'lemon', 'tomato', 'green jack', 'pumpkin', 'paddy', 'rice', 'wheat', 'flour', 'olive', 'banana', 'guava', 'cocoanut', 'palm', 'grape', 'mango', 'berry', 'almond', 'walnut', 'jasmine', 'lily', 'jam', 'cake', 'coffee', 'tea', 'biscuit', 'arch', 'window', 'snack', 'icecream', 'soda water', 'sugar candy', 'mirror', 'roller', 'school', 'college', 'university', 'black board', 'bell', 'blobe', 'duster', 'chalk', 'principal', 'arts', 'science', 'commerce', 'fine arts', 'engineering', 'medical science', 'management', 'agriculture', 'law', 'technology', 'horticulture', 'leaf', 'log']
   
     def __algo__(self)->dict:
         hour= datetime.now().hour
