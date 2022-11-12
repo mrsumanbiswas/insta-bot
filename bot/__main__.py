@@ -1,4 +1,5 @@
 from time import sleep,time
+from os import system
 from requests import get
 from .__insta__ import Bot
 from .__media__  import Media
@@ -13,32 +14,38 @@ class Run(Bot,Media,Analysis):
 
     def __uploader__(self,_type:str,url:str,content:str,hashtags:list[str]):
         if _type == "video":
-            name=time+".mp4"
+            name=str(time())+".mp4"
         else:
-            name=time+".jpg"
+            name=str(time())+".jpg"
 
         for i in hashtags:
-            content += ("#" + hashtags[i])
+            content += f"#{i}"
 
         open("temp/"+name,"wb").write(get(url).content)
-        if _type == "image":
-            super().upload_image("temp/"+name,caption=content)
-        elif _type == "video":
-            super().upload_video("temp/"+name,caption=content)
-        else:
-            super().upload_story("temp/"+name)
+        # if _type == "image":
+        #     super().upload_image("temp/"+name,caption=content)
+        # elif _type == "video":
+        #     super().upload_video("temp/"+name,caption=content)
+        # else:
+        #     super().upload_story("temp/"+name)
+
+        system(f"rm -r temp/{name}")
 
     def __sleeper__(self,time:int):
         """
         ### `time` is in hour(s)
         """
         print(f"I'm going to sleep for next {time} hour(s).")
+        system("rm -r temp/*")
         sleep(time*60*60)
         print("My sleep is done!")
 
     def __run__(self):
+        query_index=0
+        category_index = 0
         while True:
-            data = super().__algo__()
+            data = super().__algo__(category_index,query_index)
+            print(data["query"])
             if data['type'] == "image":
                 content=super().image(
                     q=data['query'],
@@ -61,4 +68,16 @@ class Run(Bot,Media,Analysis):
             for post in content[0]:
                 result = super().__analysis__(post,content[1],data['type'])
                 self.__uploader__(result[0],result[1],result[2],result[3])
+            
             self.__sleeper__(0.001)
+
+            if category_index == len(self.category):
+                category_index =0
+            else:
+                category_index += 1
+        
+            if query_index == len(self.query):
+                query_index =0
+            else:
+                query_index += 1
+
