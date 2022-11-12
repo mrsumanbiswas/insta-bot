@@ -15,6 +15,7 @@ class Analysis():
         query_index=0
         _type = "image"
 
+
         if hour >= 0 and hour < 4:
             _type = "story"
         elif hour >= 4 and hour <8:
@@ -24,7 +25,7 @@ class Analysis():
         elif hour >= 12 and hour <16:
             _type = "story"
         elif hour >= 16 and hour <20:
-            _type = "video"
+            _type = "image"
         else:
             pass
         
@@ -33,10 +34,10 @@ class Analysis():
         else:
             category_index += 1
         
-        if queary_index == len(self.query):
-            queary_index =0
+        if query_index == len(self.query):
+            query_index =0
         else:
-            queary_index += 1
+            query_index += 1
         
         return {
             "type":_type,
