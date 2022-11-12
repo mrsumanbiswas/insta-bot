@@ -3,6 +3,8 @@ from bot import Run
 
 if __name__ == "__main__":
     system("rm -r config/*")
+    system("mkdir temps")
+    
     try:
         username=getenv("username"),
         password=getenv("password"),
