@@ -24,7 +24,6 @@ class Media():
             }
         )
         for x in res.json()['hits']:
-
             data.append(x['webformatURL'])
 
         return data,q
@@ -44,7 +43,6 @@ class Media():
                 "per_page":3
             }
         )
-
         for x in res.json()['hits']:
             data.append(x['videos']['small']['url'])
     
