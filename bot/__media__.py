@@ -1,4 +1,5 @@
 from requests import get
+from random import randint
 
 class Media():
     def __init__(
@@ -6,6 +7,9 @@ class Media():
         ) -> None:
         self.url:str = "https://pixabay.com/api/"
         self.api_key=api_key
+        self.colors =[
+            "grayscale", "transparent", "red", "orange", "yellow", "green", "turquoise", "blue", "lilac", "pink", "white", "gray", "black", "brown"
+        ]
 
     def image(self,q:str,orientation:str="vertical",category:str="all",_type:str="all")->tuple[list,str]:
         data:list=[]
@@ -20,6 +24,7 @@ class Media():
                 "q":q,
                 "category":category,
                 "image_type":_type,
+                "colors":self.colors[randint(0,len(self.colors))],
                 "min_width":1080,
                 "min_height":1080,
                 "per_page":5
