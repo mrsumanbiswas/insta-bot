@@ -20,6 +20,8 @@ class Media():
                 "q":q,
                 "category":category,
                 "image_type":_type,
+                "min_width":1080,
+                "min_height":1080,
                 "per_page":5
             }
         )
@@ -40,6 +42,8 @@ class Media():
                 "q":q,
                 "category":category,
                 "video_type":_type,
+                "min_width":1080,
+                "min_height":1080,
                 "per_page":3
             }
         )
