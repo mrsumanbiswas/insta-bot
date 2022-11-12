@@ -7,32 +7,41 @@ class Analysis():
         self.category =[
             "backgrounds", "nature", "science", "education", "feelings", "health", "people", "religion", "places", "animals", "industry", "computer", "food", "sports", "transportation", "travel", "buildings", "business", "music"
         ]
+        self.query = []
   
     def __algo__(self)->dict:
         hour= datetime.now().hour
-        index = 0
+        category_index = 0
+        query_index=0
+        _type = "image"
 
         if hour >= 0 and hour < 4:
-            pass
+            _type = "story"
         elif hour >= 4 and hour <8:
-            pass
+            _type = "video"
         elif hour >= 8 and hour <12:
-            pass
+            _type = "image"
         elif hour >= 12 and hour <16:
-            pass
+            _type = "story"
         elif hour >= 16 and hour <20:
-            pass
+            _type = "video"
         else:
             pass
         
-        if index == len(self.category):
-            index =0
+        if category_index == len(self.category):
+            category_index =0
         else:
-            index += 1
+            category_index += 1
+        
+        if queary_index == len(self.query):
+            queary_index =0
+        else:
+            queary_index += 1
         
         return {
-            "type":"all",
-            "category": self.category[index]
+            "type":_type,
+            "category": self.category[category_index],
+            "query":self.query[query_index]
         }
 
     def __analysis__(self,url:str,q:str,_type:str)->tuple[str,str,list]:
