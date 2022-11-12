@@ -3,11 +3,11 @@ from instabot import Bot as insta
 class Bot():
     def __init__(
         self,
-        username:str,
-        password:str
+        uname:str,
+        passwd:str
     ) -> None:
         self.bot = insta()
-        self.bot.login(username=username,password=password)
+        self.bot.login(username=uname,password=passwd)
 
     def upload_image(
         self,
