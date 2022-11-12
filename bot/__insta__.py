@@ -1,14 +1,14 @@
+from os import getenv
 from instabot import Bot as insta
 
 class Bot():
     def __init__(
         self,
-        uname:str,
+        userid:str,
         passwd:str
     ) -> None:
         self.bot = insta()
-        self.bot.login(username=uname,password=passwd)
-
+        # self.bot.login(username=userid,password=passwd)
     def upload_image(
         self,
         photo:str,
