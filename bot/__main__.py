@@ -1,4 +1,5 @@
-from time import sleep
+from time import sleep,time
+from requests import get
 from .__insta__ import Bot
 from .__media__  import Media
 from .__analysis__ import Analysis
@@ -11,7 +12,13 @@ class Run(Bot,Media,Analysis):
         self.__run__()
 
     def __uploader__(self,_type:str,url:str,content:str,hashtags:list[str]):
-        pass
+        if _type == "video":
+            name=time+".mp4"
+        else:
+            name=time+".jpg"
+
+        open("temp/"+name,"wb").write(get(url).content)
+        
 
     def __sleeper__(self,time:int):
         """
