@@ -23,7 +23,7 @@ class Bot():
        """
        return self.bot.upload_photo(photo,caption,None,False)
 
-    def upload_video(self,video:str,caption:str,thumbnail:str):
+    def upload_video(self,video:str,caption:str,thumbnail:str=None):
         """
         Upload video to Instagram
 

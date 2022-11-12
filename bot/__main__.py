@@ -17,8 +17,16 @@ class Run(Bot,Media,Analysis):
         else:
             name=time+".jpg"
 
+        for i in hashtags:
+            content += ("#" + hashtags[i])
+
         open("temp/"+name,"wb").write(get(url).content)
-        
+        if _type == "image":
+            super().upload_image("temp/"+name,caption=content)
+        elif _type == "video":
+            super().upload_video("temp/"+name,caption=content)
+        else:
+            super().upload_story("temp/"+name)
 
     def __sleeper__(self,time:int):
         """
