@@ -38,24 +38,12 @@ class Run(Bot,Media,Analysis):
         print(f"I'm going to sleep for next {time} hour(s).")
         system("rm -r temp/*")
         self.query.reverse()
-        sleep(time*60*60)
+        sleep(time*60)
         print("My sleep is done!")
 
     def __run__(self):
-        query_index=0
-        category_index = 0
         while True:
-            data = super().__algo__(category_index,query_index)
-
-            if category_index == len(self.category):
-                category_index = 0
-            else:
-                category_index += 1
-        
-            if query_index == len(self.query):
-                query_index = 0
-            else:
-                query_index += 1
+            data = super().__algo__()
             
             if data['type'] == "image":
                 content=super().image(
@@ -81,6 +69,6 @@ class Run(Bot,Media,Analysis):
                 result = super().__analysis__(post,content[1],data['type'])
                 self.__uploader__(result[0],result[1],result[2],result[3])
             
-            self.__sleeper__(3)
+            self.__sleeper__(15)
 
 
