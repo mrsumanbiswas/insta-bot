@@ -1,6 +1,7 @@
-from time import sleep,time
 from os import system
 from requests import get
+from logging import basicConfig,info,INFO
+from time import sleep,time
 from .__insta__ import Bot
 from .__media__  import Media
 from .__analysis__ import Analysis
@@ -10,6 +11,7 @@ class Run(Bot,Media,Analysis):
         super().__init__(username,password)
         super(Bot,self).__init__(api_key)
         super(Media,self).__init__()
+        basicConfig(filename="log/insta-bot.log",level=INFO)
         self.__run__()
 
     def __uploader__(self,_type:str,url:str,content:str,hashtags:list[str]):
@@ -44,6 +46,7 @@ class Run(Bot,Media,Analysis):
     def __run__(self):
         while True:
             data = super().__algo__()
+            info(data)
             
             if data['type'] == "image":
                 content=super().image(
@@ -69,6 +72,6 @@ class Run(Bot,Media,Analysis):
                 result = super().__analysis__(post,content[1],data['type'])
                 self.__uploader__(result[0],result[1],result[2],result[3])
             
-            self.__sleeper__(15)
+            self.__sleeper__(10)
 
 
